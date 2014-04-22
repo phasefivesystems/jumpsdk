@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>357ED586-96E7-444F-9415-24C69DFBB6AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EchoChannelExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B67B35F0-5FE4-45AB-91D4-A9F1491C0685</key>
+		<string>https://github.com/phasefivesystems/jumpsdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Examples/Mac/EchoChannelExample/EchoChannelExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B67B35F0-5FE4-45AB-91D4-A9F1491C0685</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/phasefivesystems/jumpsdk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B67B35F0-5FE4-45AB-91D4-A9F1491C0685</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B67B35F0-5FE4-45AB-91D4-A9F1491C0685</string>
+			<key>IDESourceControlWCCName</key>
+			<string>jumpsdk</string>
+		</dict>
+	</array>
+</dict>
+</plist>

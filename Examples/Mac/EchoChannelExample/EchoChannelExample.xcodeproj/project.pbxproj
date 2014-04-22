@@ -1,0 +1,275 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B288C261906AB22004990EA /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B288C251906AB22004990EA /* main.c */; };
+		0B288C321906AB8B004990EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B288C311906AB8B004990EA /* Foundation.framework */; };
+		0BA4444E1906C8E80055BC34 /* libJumpApiClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA4444D1906C8E80055BC34 /* libJumpApiClient.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0B288C201906AB22004990EA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0B288C221906AB22004990EA /* EchoChannelExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EchoChannelExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B288C251906AB22004990EA /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		0B288C311906AB8B004990EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0BA4444C1906C8DF0055BC34 /* Jump_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Jump_SDK.h; path = ../../../Jump_SDK.h; sourceTree = "<group>"; };
+		0BA4444D1906C8E80055BC34 /* libJumpApiClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libJumpApiClient.a; path = ../../../libJumpApiClient.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B288C1F1906AB22004990EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B288C321906AB8B004990EA /* Foundation.framework in Frameworks */,
+				0BA4444E1906C8E80055BC34 /* libJumpApiClient.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B288C191906AB21004990EA = {
+			isa = PBXGroup;
+			children = (
+				0BA444501906C9150055BC34 /* SDK */,
+				0BA4444F1906C9040055BC34 /* Frameworks */,
+				0B288C241906AB22004990EA /* EchoChannelExample */,
+				0B288C231906AB22004990EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B288C231906AB22004990EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B288C221906AB22004990EA /* EchoChannelExample */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B288C241906AB22004990EA /* EchoChannelExample */ = {
+			isa = PBXGroup;
+			children = (
+				0B288C251906AB22004990EA /* main.c */,
+			);
+			path = EchoChannelExample;
+			sourceTree = "<group>";
+		};
+		0BA4444F1906C9040055BC34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B288C311906AB8B004990EA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BA444501906C9150055BC34 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				0BA4444C1906C8DF0055BC34 /* Jump_SDK.h */,
+				0BA4444D1906C8E80055BC34 /* libJumpApiClient.a */,
+			);
+			name = SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B288C211906AB22004990EA /* EchoChannelExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B288C2B1906AB22004990EA /* Build configuration list for PBXNativeTarget "EchoChannelExample" */;
+			buildPhases = (
+				0B288C1E1906AB22004990EA /* Sources */,
+				0B288C1F1906AB22004990EA /* Frameworks */,
+				0B288C201906AB22004990EA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EchoChannelExample;
+			productName = EchoChannelExample;
+			productReference = 0B288C221906AB22004990EA /* EchoChannelExample */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B288C1A1906AB21004990EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Phase Five Systems";
+			};
+			buildConfigurationList = 0B288C1D1906AB21004990EA /* Build configuration list for PBXProject "EchoChannelExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0B288C191906AB21004990EA;
+			productRefGroup = 0B288C231906AB22004990EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B288C211906AB22004990EA /* EchoChannelExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B288C1E1906AB22004990EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B288C261906AB22004990EA /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0B288C291906AB22004990EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0B288C2A1906AB22004990EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0B288C2C1906AB22004990EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/Archives/2014-04-22/JumpApiClient",
+					"2014-04-22,",
+					11.20,
+					AM.xcarchive/Products/usr/local/lib,
+					/Users/haseebq/jumprepos/jumpsdk,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0B288C2D1906AB22004990EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/Archives/2014-04-22/JumpApiClient",
+					"2014-04-22,",
+					11.20,
+					AM.xcarchive/Products/usr/local/lib,
+					/Users/haseebq/jumprepos/jumpsdk,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B288C1D1906AB21004990EA /* Build configuration list for PBXProject "EchoChannelExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B288C291906AB22004990EA /* Debug */,
+				0B288C2A1906AB22004990EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B288C2B1906AB22004990EA /* Build configuration list for PBXNativeTarget "EchoChannelExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B288C2C1906AB22004990EA /* Debug */,
+				0B288C2D1906AB22004990EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B288C1A1906AB21004990EA /* Project object */;
+}
