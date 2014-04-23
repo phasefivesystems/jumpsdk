@@ -1,4 +1,4 @@
-This sample implements an echoing virtual channel. Anything it receives on the virtual channel, it will echo back to the server.
+This sample implements an echoing virtual channel. Anything it receives on the virtual channel, it will echo back to the virtual channel.
 
 To use this sample:
 
