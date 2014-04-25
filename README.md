@@ -16,7 +16,7 @@ Architecture
 
 Jump Desktop for Mac has an out-of-process plugin model: plugins run as separate applications in the user's desktop session and communicate with JD for Mac using IPC. 
 
-After the SDK is initialized it will try to register the virtual channel with an already running JD on the user's desktop. If JD isn't running, the SDK wait for JD to be launched by the user. 
+After the SDK is initialized it will try to register the virtual channel with an already running JD on the user's desktop. If JD isn't running, the SDK will wait for JD to be launched by the user. 
 
 Once registration is successful your plugin's virtual channel callbacks will be called the next time user connect to a RDP session. 
 
