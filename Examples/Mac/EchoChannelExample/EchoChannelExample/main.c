@@ -118,7 +118,7 @@ int main(int argc, const char * argv[])
                                              EchoVirtualChannelOpenFunc,
                                              EchoVirtualChannelConsumeFunc,
                                              EchoVirtualChannelCloseFunc);
-    if (result == JD_ERROR)
+    if (result != JD_OK)
     {
         Log("Could not register virtual channel");
         goto End;
