@@ -117,7 +117,7 @@ void JD_VirtualChannelSetUserData(JD_VirtualChannelRef virtualChannelRef, void* 
 void* JD_VirtualChannelGetUserData(JD_VirtualChannelRef virtualChannelRef);
     
 //
-// Asynchronous sends data to server over the virtual channel. This function copies the data in Jump's internal
+// Asynchronously sends data to server over the virtual channel. This function copies the data in Jump's internal
 // buffer and returns immediately. This function is thread safe and call be called from any thread. Caller must 
 // make sure virtualChannelRef is a valid, opened virtual channel.
 //
