@@ -109,6 +109,8 @@ JD_Result JD_ClientRegisterVirtualChannel(JD_ClientRef clientRef,
 
 //
 // Sets a virtual channel's user data. You can retrive this data later by calling JD_VirtualChannelGetUserData.
+// This function is thread safe and call be called from any thread. Caller must  make sure virtualChannelRef is
+// a valid, opened virtual channel.
 //
 // @param virtualChannelRef a reference to the virtual channel
 // @param userData          the data
@@ -117,6 +119,8 @@ void JD_VirtualChannelSetUserData(JD_VirtualChannelRef virtualChannelRef, void* 
 
 //
 // Gets a virtual channel's user data set by an earlier call to JD_VirtualChannelSetUserData
+// This function is thread safe and call be called from any thread. Caller must  make sure virtualChannelRef
+// is a valid, opened virtual channel.
 //
 // @param virtualChannelRef a reference to the virtual channel
 //
@@ -124,7 +128,9 @@ void JD_VirtualChannelSetUserData(JD_VirtualChannelRef virtualChannelRef, void* 
 void* JD_VirtualChannelGetUserData(JD_VirtualChannelRef virtualChannelRef);
     
 //
-// Sends data to server over the virtual channel.
+// Asynchronously sends data to server over the virtual channel. This function copies the data into Jump's internal
+// buffer and returns immediately. This function is thread safe and call be called from any thread. Caller must 
+// make sure virtualChannelRef is a valid, opened virtual channel.
 //
 // @param virtualChannelRef a reference to the virtual channel
 // @param data              the data to send

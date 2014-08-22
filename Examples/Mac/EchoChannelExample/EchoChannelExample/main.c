@@ -126,7 +126,9 @@ int main(int argc, const char * argv[])
     
     // The main thread _must_ process run loop mesages. Cocoa GUI apps do this by
     // default. If you have a command line / headless app  you must make sure the main
-    // thread is processing runloop messages by calling CFRunLoopRun* functions
+    // thread is processing runloop messages by calling CFRunLoopRun* functions. If 
+    // you don't do this, the pluggin framework will be unable to communicate with 
+    // Jump Desktop for Mac
     while (1)
     {
         CFRunLoopRun();
