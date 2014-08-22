@@ -20,6 +20,11 @@ typedef int JD_Result;
 typedef void* JD_ClientRef;
 typedef void* JD_VirtualChannelRef;
 
+// Flags for dataFlags in JD_VirtualChannelConsumeFunc
+#define CHANNEL_FLAG_FIRST  0x1
+#define CHANNEL_FLAG_LAST   0x2
+#define CHANNEL_FLAG_MIDDLE 0
+#define CHANNEL_FLAG_ONLY   (CHANNEL_FLAG_FIRST | CHANNEL_FLAG_LAST)
 //
 // Virtual channel callbacks
 //
@@ -37,18 +42,24 @@ typedef void* JD_VirtualChannelRef;
 // @return              JD_ERROR to prevent the channel from opening
 //
 typedef JD_Result (*JD_VirtualChannelOpenFunc)(const JD_VirtualChannelRef ref, void* openFuncData);
-    
+
 //
 // Callback to notify the plugin that data was received from the server over a virtual channel
 //
 // @param ref           a reference to the virtual channel
 // @param data          pointer to the data
 // @param dataLen       length in bytes of the data
+// @param totalDataLen 	the length of the data written by a single write operation to the server end of the virtual channel
+// @param dataFlags    	bit flags that provide information about the chunk of data being received:
+//                          CHANNEL_FLAG_FIRST  - the first chunk of data
+//                          CHANNEL_FLAG_LAST   - the last chunk of data
+//                          CHANNEL_FLAG_MIDDLE - middle chunk of data (neither the first nor last)
+//                          CHANNEL_FLAG_ONLY   - this is the first and last chunk of data
 //
 // @return              JD_OK if plugin successfully processed all the data
 // @return              JD_ERROR if there was an error processing the data
 //
-typedef JD_Result (*JD_VirtualChannelConsumeFunc)(const JD_VirtualChannelRef ref, const void* data, uint32_t dataLen);
+typedef JD_Result (*JD_VirtualChannelConsumeFunc)(const JD_VirtualChannelRef ref, const void* data, uint32_t dataLen, uint32_t totalDataLen, uint32_t dataFlags);
 
 //
 // Callback to notify the plugin that a virtual channel was closed

@@ -70,7 +70,7 @@ JD_Result EchoVirtualChannelOpenFunc(const JD_VirtualChannelRef ref, void* openU
     }
 }
 
-JD_Result EchoVirtualChannelConsumeFunc(const JD_VirtualChannelRef ref, const void* data, uint32_t dataLen)
+JD_Result EchoVirtualChannelConsumeFunc(const JD_VirtualChannelRef ref, const void* data, uint32_t dataLen, uint32_t totalDataLen, uint32_t dataFlags)
 {
     EchoStats* stats = (EchoStats*)JD_VirtualChannelGetUserData(ref);
     
