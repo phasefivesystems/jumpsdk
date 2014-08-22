@@ -6,9 +6,9 @@ Third party applications can use this SDK to implement RDP virtual channel plugi
 Requirements
 ------------
 
-* Requires Jump Desktop for Mac 4.1 or later. You can download a trial version from http://jumpdesktop.com/downloads/jdmac .
+* Requires Jump Desktop for Mac 5.0 or later. You can download a trial version from http://jumpdesktop.com/downloads/jdmac .
 * XCode 5.0 or later.
-* The SDK supports OSX 10.6+.
+* The SDK supports OSX 10.7+.
 
 
 Architecture
