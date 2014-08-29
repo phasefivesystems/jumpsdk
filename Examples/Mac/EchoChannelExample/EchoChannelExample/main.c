@@ -102,6 +102,8 @@ int main(int argc, const char * argv[])
     
     Log("Starting...");
     
+    JD_SetLogging(JD_LOG_DEBUG);
+    
     // Create a new client
     JD_ClientRef client = JD_ClientCreate();
     if (client == NULL)

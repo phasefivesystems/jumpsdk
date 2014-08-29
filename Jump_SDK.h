@@ -19,19 +19,14 @@ extern "C" {
 typedef int JD_Result;
 typedef void* JD_ClientRef;
 typedef void* JD_VirtualChannelRef;
-
-// Flags for dataFlags in JD_VirtualChannelConsumeFunc
-#define CHANNEL_FLAG_FIRST  0x1
-#define CHANNEL_FLAG_LAST   0x2
-#define CHANNEL_FLAG_MIDDLE 0
-#define CHANNEL_FLAG_ONLY   (CHANNEL_FLAG_FIRST | CHANNEL_FLAG_LAST)
+    
 //
 // Virtual channel callbacks
 //
 // Notes about threading: These callbacks happen on Jump SDK's processing thread. If you have
 // global state, make sure you have appropriate locking in place to access state
 //
-    
+  
 //
 // Callback to notify the plugin that a new virtual channel instance has been opened.
 //
@@ -42,6 +37,15 @@ typedef void* JD_VirtualChannelRef;
 // @return              JD_ERROR to prevent the channel from opening
 //
 typedef JD_Result (*JD_VirtualChannelOpenFunc)(const JD_VirtualChannelRef ref, void* openFuncData);
+
+    
+//
+// Flags for dataFlags in JD_VirtualChannelConsumeFunc
+//
+#define CHANNEL_FLAG_FIRST  0x1
+#define CHANNEL_FLAG_LAST   0x2
+#define CHANNEL_FLAG_MIDDLE 0
+#define CHANNEL_FLAG_ONLY   (CHANNEL_FLAG_FIRST | CHANNEL_FLAG_LAST)
 
 //
 // Callback to notify the plugin that data was received from the server over a virtual channel
@@ -61,12 +65,14 @@ typedef JD_Result (*JD_VirtualChannelOpenFunc)(const JD_VirtualChannelRef ref, v
 //
 typedef JD_Result (*JD_VirtualChannelConsumeFunc)(const JD_VirtualChannelRef ref, const void* data, uint32_t dataLen, uint32_t totalDataLen, uint32_t dataFlags);
 
+
 //
 // Callback to notify the plugin that a virtual channel was closed
 //
 // @param ref           a reference to the virtual channel. The plugin should make sure the virtual channel reference is no longer used after this function returns
 //
 typedef void (*JD_VirtualChannelCloseFunc)(const JD_VirtualChannelRef ref);
+
 
 //
 // Creates an initializes a new instance of the plugin framework.
@@ -75,19 +81,35 @@ typedef void (*JD_VirtualChannelCloseFunc)(const JD_VirtualChannelRef ref);
 //
 JD_ClientRef JD_ClientCreate();
     
+
 //
 // Destroys the plugin framework and cleans up all resources
 //
 // @param client reference returned by an earlier call to JD_ClientCreate
 //
 void JD_ClientDestroy(JD_ClientRef client);
-    
 
-// Flag to indicate a static virtual channel
-#define JD_CHANNEL_FLAG_STATIC   0
-    
-// Flag to indicate a dynamic virtual channel
-#define JD_CHANNEL_FLAG_DYNAMIC  1
+
+//
+// Log levels used by JD_SetLogging
+//
+#define JD_LOG_NONE      0      // Disables logging completely
+#define JD_LOG_INFO     10      // Log information messages only
+#define JD_LOG_DEBUG    20      // Verbose logging - including debug messages
+
+//
+// Sets the global logging level for the SDK. Log messages are
+// sent to the Apple System log facility via a call to NSLog()
+//
+// @param level     Use one of JD_LOG_* levels
+void JD_SetLogging(int level);
+
+
+//
+// Virtual channel flags used by JD_ClientRegisterVirtualChannel
+//
+#define JD_CHANNEL_FLAG_STATIC   0      // Static virtual Channel
+#define JD_CHANNEL_FLAG_DYNAMIC  1      // Dynamic virutal channel
     
 //
 // Registers a new virtual channel with plugin framework
@@ -107,9 +129,10 @@ JD_Result JD_ClientRegisterVirtualChannel(JD_ClientRef clientRef,
                                           JD_VirtualChannelConsumeFunc consumeFunc,
                                           JD_VirtualChannelCloseFunc closeFunc);
 
+
 //
 // Sets a virtual channel's user data. You can retrive this data later by calling JD_VirtualChannelGetUserData.
-// This function is thread safe and call be called from any thread. Caller must  make sure virtualChannelRef is
+// This function is thread safe and can be called from any thread. Caller must  make sure virtualChannelRef is
 // a valid, opened virtual channel.
 //
 // @param virtualChannelRef a reference to the virtual channel
@@ -117,19 +140,21 @@ JD_Result JD_ClientRegisterVirtualChannel(JD_ClientRef clientRef,
 //
 void JD_VirtualChannelSetUserData(JD_VirtualChannelRef virtualChannelRef, void* userData);
 
+
 //
 // Gets a virtual channel's user data set by an earlier call to JD_VirtualChannelSetUserData
-// This function is thread safe and call be called from any thread. Caller must  make sure virtualChannelRef
-// is a valid, opened virtual channel.
+// This function is thread safe and can be called from any thread. Caller must  make sure virtualChannelRef is
+// a valid, opened virtual channel.
 //
 // @param virtualChannelRef a reference to the virtual channel
 //
 // @return the user data
 void* JD_VirtualChannelGetUserData(JD_VirtualChannelRef virtualChannelRef);
-    
+
+
 //
 // Asynchronously sends data to server over the virtual channel. This function copies the data into Jump's internal
-// buffer and returns immediately. This function is thread safe and call be called from any thread. Caller must 
+// buffer and returns immediately. This function is thread safe and can be called from any thread. Caller must
 // make sure virtualChannelRef is a valid, opened virtual channel.
 //
 // @param virtualChannelRef a reference to the virtual channel
