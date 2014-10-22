@@ -8,7 +8,7 @@ Requirements
 
 * Requires Jump Desktop for Mac 5.0 or later. You can download a trial version from http://jumpdesktop.com/downloads/jdmac .
 * XCode 5.0 or later.
-* The SDK supports OSX 10.7+.
+* The SDK supports OSX 10.8+.
 
 
 Architecture
