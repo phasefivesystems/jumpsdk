@@ -11,7 +11,7 @@ Requirements
 * The SDK supports OSX 10.8+.
 
 
-isArchitecture
+Architecture
 ------------
 
 Jump Desktop for Mac has an out-of-process plugin model: plugins run as separate applications in the user's desktop session and communicate with JD for Mac using IPC. 
