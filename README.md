@@ -45,4 +45,4 @@ The SDK does not work inside sandboxed applications. If your application needs t
 Support
 -----------
 
-For support send an email to <support@jumpdesktop.com> or  use the github issue tracker.
+For support send an email to <support@jumpdesktop.com> or use the github issue tracker.
